@@ -119,6 +119,7 @@ Vue.component("component-table", {
                 for (var key in this.listProducts) {
                     this.languages.push(this.listProducts[key]);
                 }
+                
             }
         },
         updateCheckall: function (item) {
@@ -138,8 +139,8 @@ Vue.component("component-table", {
                 localStorage.setItem("check", JSON.stringify(this.languages));
                 if (this.languages.length == this.listProducts.length) {
                     localStorage.setItem("checkall", JSON.stringify(this.isCheckAll));
-                }
-
+                }   
+                
             }
             else {
                 localStorage.removeItem('check')
@@ -191,7 +192,7 @@ Vue.component("component-table", {
             <thead>
                 <tr>
                     <th class="product__body--thcheckbox"><input type="checkbox" v-model="isCheckAll" @click="checkAll()" id="checkAll" ></th>
-                    <th class="product__body--thproduct">{{languages.length}} Product</th>
+                    <th class="product__body--thproduct" >{{languages.length}} Product </th>
                     <th class="product__body--thprice">Price</th>
                 </tr>
             </thead>

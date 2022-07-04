@@ -97,6 +97,10 @@ body {
   accent-color: #F65E5D;
 }
 
+.product__body input:indeterminate {
+  background-color: #F65E5D;
+}
+
 .product__body tbody {
   display: block;
   margin-top: 50px;
